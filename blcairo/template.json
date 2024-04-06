@@ -1,0 +1,12 @@
+{
+  "name": "BLCairo Project",
+  "description": "Skeleton project for blcairo go. Includes bitlib",
+  "tokens": [
+    {
+      "name": "MODULE_PREFIX",
+      "default": "github.com/bit101/"
+    }
+  ],
+  "preMessage": "Let's do this!",
+  "postMessage": "Enter project directory, run make."
+}

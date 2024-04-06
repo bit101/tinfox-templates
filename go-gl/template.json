@@ -1,0 +1,11 @@
+{
+  "name": "go-gl Project",
+  "description": "Skeleton project for go-gl.",
+  "tokens": [
+    {
+      "name": "MODULE",
+      "default": "mymodule"
+    }
+  ],
+  "postMessage": "Run the init.sh script in the project to set things up."
+}

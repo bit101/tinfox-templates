@@ -1,0 +1,33 @@
+{
+  "name": "Demo",
+  "description": "A dummy project showing most, if not all, the features available in a template.",
+  "author": "Keith Peters",
+  "contact": "https://github.com/bit101",
+  "tokens": [
+    {
+      "name": "USER_NAME",
+      "required": true
+    },
+    {
+      "name": "TITLE",
+      "default": "Best site in the world"
+    },
+    {
+      "name": "SOURCE_FOLDER_NAME",
+      "default": "src",
+      "isPath": true
+    },
+    {
+      "name": "LIB_FOLDER_NAME",
+      "default": "lib",
+      "isPath": true
+    },
+    {
+      "name": "LIB_FILE_NAME",
+      "default": "some_lib",
+      "isPath": true
+    }
+  ],
+  "ignore": [ "template_readme.md" ],
+  "postMessage": "Congrats, you installed the template!"
+}

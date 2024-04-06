@@ -1,0 +1,5 @@
+{
+  "name": "Python",
+  "description": "A Python3 application.",
+  "postMessage": "Go into the new project directory and type `python main.py`"
+}

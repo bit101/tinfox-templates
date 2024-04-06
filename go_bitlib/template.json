@@ -1,0 +1,14 @@
+{
+  "name": "GoBitLib",
+  "description": "Creates a Go executable project including bitlib.",
+  "tokens": [
+    {
+      "name": "MODULE",
+      "default": "mymodule"
+    }
+  ],
+  "author": "Keith Peters",
+  "contact": "https://github.com/bit101",
+  "postMessage": "Project created. Go into directory and run `make`"
+
+}
