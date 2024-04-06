@@ -6,4 +6,4 @@ After creating the project, cd into the directory it created and type `npm insta
 
 You can then type `npm start` to run the dev server and go to `localhost:8080` in your browser to view the site.
 
-Feel free to customize this template so that it fits your needs.
+Note that this template is really only an example of how you could create a project like this. It is not kept up to date and many of the libraries and versions may change over time.
