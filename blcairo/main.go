@@ -2,6 +2,7 @@
 package main
 
 import (
+	"github.com/bit101/bitlib/bllog"
 	"github.com/bit101/bitlib/blmath"
 	cairo "github.com/bit101/blcairo"
 	"github.com/bit101/blcairo/render"
@@ -9,6 +10,8 @@ import (
 )
 
 func main() {
+	logfile := bllog.InitProjectLog("project.log")
+	defer logfile.Close()
 
 	renderTarget := target.Video
 
