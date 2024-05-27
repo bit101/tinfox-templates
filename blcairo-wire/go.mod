@@ -1,0 +1,3 @@
+module ${MODULE_PREFIX}${PROJECT_DIR}
+
+go 1.22.1

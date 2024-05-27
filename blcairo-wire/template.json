@@ -1,0 +1,12 @@
+{
+  "name": "Wire Project",
+  "description": "Wire project",
+  "tokens": [
+    {
+      "name": "MODULE_PREFIX",
+      "default": "github.com/bit101/"
+    }
+  ],
+  "preMessage": "Let's do this!",
+  "postMessage": "Enter project directory, run init, then make."
+}
