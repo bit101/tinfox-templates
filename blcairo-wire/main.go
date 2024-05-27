@@ -12,21 +12,15 @@ import (
 )
 
 func main() {
-
 	renderTarget := target.Video
+	fileName := "${PROJECT_DIR}"
 
-	switch renderTarget {
-	case target.Image:
-		render.Image(800, 800, "out/out.png", scene1, 0.0)
-		render.ViewImage("out/out.png")
-		break
-
-	case target.Video:
+	if renderTarget == target.Image {
+		render.CreateAndViewImage(800, 800, "out/"+fileName+".png", scene1, 0.0)
+	} else if renderTarget == target.Video {
 		program := render.NewProgram(400, 400, 30)
 		program.AddSceneWithFrames(scene1, 180)
-		program.RenderVideo("out/frames", "out/out.mp4")
-		render.PlayVideo("out/out.mp4")
-		break
+		program.RenderAndPlayVideo("out/frames", "out/"+fileName+".mp4")
 	}
 }
 
