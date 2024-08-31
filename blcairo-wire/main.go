@@ -26,22 +26,30 @@ func main() {
 
 //revive:disable:unused-parameter
 const (
-	tau = blmath.Tau
-	pi  = math.Pi
+	tau  = blmath.Tau
+	pi   = math.Pi
+	blur = false
 )
+
+var (
+	shape *wire.Shape
+)
+
+func init() {
+	shape = wire.Sphere(400, 10, 20, true, true)
+}
 
 func scene1(context *cairo.Context, width, height, percent float64) {
 	context.WhiteOnBlack()
 	wire.InitWorld(context, 200, 200, 800)
 
-	shape := wire.Sphere(400, 10, 20, true, true)
+	s := shape.Clone()
+	s.Rotate(percent*tau, percent*2*tau, 0)
 
-	shape.Rotate(percent*tau, percent*2*tau, 0)
+	s.Stroke(2)
 
-	context.SetLineWidth(2)
-	shape.Stroke()
-
-	// context.GaussianBlur(20)
-	// context.SetLineWidth(1)
-	// shape.Stroke()
+	if blur {
+		context.GaussianBlur(20)
+		s.Stroke(1)
+	}
 }
