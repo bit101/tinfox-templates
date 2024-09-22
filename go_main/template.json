@@ -1,6 +1,10 @@
 {
   "name": "GoMain",
   "description": "Creates a Go executable project with a 'main' file.",
-  "author": "Keith Peters",
-  "contact": "https://github.com/bit101"
+  "tokens": [
+    {
+      "name": "MODULE_PREFIX",
+      "default": "github.com/bit101/"
+    }
+  ]
 }

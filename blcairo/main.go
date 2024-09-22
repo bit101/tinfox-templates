@@ -21,9 +21,9 @@ func main() {
 	fileName := "${PROJECT_DIR}"
 
 	if renderTarget == target.Image {
-		render.CreateAndViewImage(800, 800, "out/"+fileName+".png", scene1, 0.0)
+		render.CreateAndViewImage(600, 600, "out/"+fileName+".png", scene1, 0.0)
 	} else if renderTarget == target.Video {
-		program := render.NewProgram(400, 400, 30)
+		program := render.NewProgram(600, 600, 30)
 		program.AddSceneWithFrames(scene1, 60)
 		program.RenderAndPlayVideo("out/frames", "out/"+fileName+".mp4")
 	}
