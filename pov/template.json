@@ -1,0 +1,7 @@
+{
+  "name": "povray",
+  "description": "povray scene file template and Makefile",
+  "author": "Keith Peters",
+  "contact": "https://github.com/bit101",
+  "postMessage": "Enter the project name and type `make`"
+}
