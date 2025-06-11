@@ -28,7 +28,6 @@ pov-single:
 ################
 # Animation
 ################
-
 video: clean pov-anim ffmpeg
 	@mpv -loop ./out/out.mp4
 
@@ -59,7 +58,6 @@ pov-anim:
 ################
 # Other
 ################
-
 clean:
 	@rm -rf out/frames
 	@mkdir -p out/frames
