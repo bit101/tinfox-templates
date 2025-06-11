@@ -22,6 +22,8 @@ pov-single:
 		main.pov \
 		Antialias=$(ANTIALIAS) \
 		Display=false \
+		Verbose=$(VERBOSE) \
+		All_Console=$(CONSOLE) \
 		+W$(WIDTH) +H$(HEIGHT) \
 		Output_File_Name=./out/out.png
 
