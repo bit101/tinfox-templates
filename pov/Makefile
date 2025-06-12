@@ -7,6 +7,7 @@ HEIGHT=720
 VERBOSE=false
 CONSOLE=false
 ANTIALIAS=true
+FPS=30
 
 # single or video
 default: single
@@ -36,7 +37,7 @@ video: clean pov-anim ffmpeg
 ffmpeg: 
 	@ffmpeg \
 		-y \
-		-framerate 30 \
+		-framerate $(FPS) \
 		-i ./out/frames/frame_%0$(ZEROS)d.png \
 		-s:v $(WIDTH)x$(HEIGHT) \
 		-c:v libx264 \

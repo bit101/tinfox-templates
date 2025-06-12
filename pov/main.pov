@@ -1,7 +1,10 @@
+#version 3.7;
 #include "stdinc.inc"
 #include "textures.inc"
 #include "stones.inc"
-#include "skies.inc"
+#include "../lib/objects.inc"
+
+global_settings { assumed_gamma 1 }
 
 light_source {
   <-4, 4, -3>
@@ -15,8 +18,8 @@ light_source {
 
 camera {
   right x * image_width / image_height
-    location <2, 2, -4>
-    look_at  <0, 0, 0>
+  location <2, 2, -4>
+  look_at  <0, 0, 0>
 }
 
 box {
