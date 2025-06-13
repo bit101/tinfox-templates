@@ -9,16 +9,21 @@ CONSOLE=false
 ANTIALIAS=true
 FPS=30
 
-# single or video
-default: single
+# image or video
+default: image
+
+# if you change a variable above and want to force a re-render
+# default: clean image
 
 ################
 # Single frame
 ################
-single: clean pov-single
-	@eog ./out/out.png
+image: out/out.png
+	@eog ./out/out.png 2&> /dev/null
 
-pov-single: 
+out/out.png: main.pov
+	@echo "building image..."
+	@mkdir -p out
 	@povray \
 		main.pov \
 		Antialias=$(ANTIALIAS) \
@@ -31,10 +36,11 @@ pov-single:
 ################
 # Animation
 ################
-video: clean pov-anim ffmpeg
-	@mpv -loop ./out/out.mp4
+video: out/out.mp4
+	@mpv -loop ./out/out.mp4 2&> /dev/null
 
-ffmpeg: 
+out/out.mp4: out/frames
+	@echo "generating video..."
 	@ffmpeg \
 		-y \
 		-framerate $(FPS) \
@@ -46,7 +52,9 @@ ffmpeg:
 		-pix_fmt yuv420p \
 		./out/out.mp4
 
-pov-anim: 
+out/frames: main.pov 
+	@echo "generating frames..."
+	@mkdir -p out/frames
 	@povray \
 		main.pov \
 		Antialias=$(ANTIALIAS) \
@@ -62,6 +70,5 @@ pov-anim:
 # Other
 ################
 clean:
-	@rm -rf out/frames
-	@mkdir -p out/frames
-
+	@echo "cleaning..."
+	@rm -rf out
